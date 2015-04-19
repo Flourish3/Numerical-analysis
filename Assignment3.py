@@ -8,7 +8,7 @@ from  pylab import *
 from  numman import *
 from scipy.linalg import solve
 
-
+#---------------------------------------------------------------
 #Task 1
 days = array([1,2,3,4,5])
 energy = array([27.93, 46.98, 31.95, 31.68, 21])
@@ -84,7 +84,7 @@ xn=array([cos(((2*k-1)/(2*n))*pi) for k in range(n)])
 def f(x):
     return 1/(1+25*x**2)
 
-n=15
+n=3
 #Equidistant points
 x=linspace(-1,1,n)
 y=[]
@@ -92,13 +92,23 @@ y=[]
 for i in range(n):
     y+= [f(x[i])]
 
-print(y)
 p = polyfit(x,y,n-1)
 
 xplot = linspace(-1,1,100)
-plot(xplot,abs(f(xplot)-polyval(p,xplot)))
+#plot(xplot,abs(f(xplot)-polyval(p,xplot)))
 
 #Chebychev pints
+
+xn=array([cos(((2*k-1)/(2*n))*pi) for k in range(n)])
+p = polyfit(xn,y,n-1)
+plot(xplot,abs(f(xplot)-polyval(p,xplot)))
+
+#-----------------------------------------------------------------
+#Task 5
+
+
+
+
 
 
 
