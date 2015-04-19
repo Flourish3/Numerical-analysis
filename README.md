@@ -1,2 +1,2 @@
 # NummanAssignments
-Python assignments from class in Numerical Analysis
+Python assignments from class in Numerical Analysis FMN050
